@@ -11,8 +11,9 @@ function RecipientStartShare() {
     e.preventDefault();
     setMessage("");
     try {
-      const url =
-        "ws://localhost:8000/ws/screen-share/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiMTEiLCJyb2xlIjoicmVjaXBpZW50In0.85o08POKGxxY4gJy55h6dZ99WH5h0RkCYq68yypm1SM";
+     token = "GET From API"
+        const url =
+          "ws://localhost:8000/ws/screen-share/?token=${token}";
       const role = "recipient";
       navigate(`/screen-share/`, {
         state: { url, role },
