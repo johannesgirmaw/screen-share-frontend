@@ -8,8 +8,9 @@ function SenderConnect() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
+    token = "GET From API"
     const url =
-      "ws://localhost:8000/ws/screen-share/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiMTEiLCJyb2xlIjoic2VuZGVyIn0.8CgHNOY3UO4yRuwjdF1S1x6erro6vHH69THNohH0roc";
+      "ws://localhost:8000/ws/screen-share/?token=${token}";
 
     // The backend returns session_id, sender_token, role
     const role = "sender";
